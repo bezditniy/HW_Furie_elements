@@ -2,18 +2,24 @@ body{
     margin: 0;
     background-color: #131210;
     font-family: montserrat, sans-serif;
-    min-width: 1280px;
-    height: 5000px;
+    width: auto;
+    height: auto;
 }
 
 header{
     width: 100%;
 }
 
+.logo-box{
+    display: flex;
+    place-content: stretch space-evenly;
+    justify-content: space-between;
+}
+
 .logo{
     display: inline-block;
     margin-top: 55px;
-    margin-left: 101px;
+    margin-left: 100px;
 }
 
 div.contact-inf{
@@ -44,6 +50,12 @@ div.contact-inf{
     bottom: 8px;
 }
 
+.log-in-box{
+    display: inline-block;
+    width: 226px;
+    height: 65px;
+}
+
 div.log-in{
     background-color: #ffffff;
     color: #135ec5;
@@ -71,10 +83,50 @@ div.log-in{
     font-weight: 700;
 }
 
-.merc-block{
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+@media (max-width: 1100px) { /* медиа-запрос для настройки навигационной панели под разные размеры екранов*/
+    header{
+        width: 100%;
+    }
+    
+    .logo-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+@media (max-width: 800px), (orientation: portrait) { /* медиа-запрос для настройки навигационной панели под разные размеры екранов*/
+    header{
+        width: 100%;
+    }
+    
+    .logo-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo{
+        display: inline-block;
+        margin-top: 55px;
+        margin-left: 0px;
+    }
+    
+    .contact-inf{
+        margin-top: 47px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    } 
+}
+
+.big-text-box{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    text-shadow: black 10px 10px 40px;
 }
 
 .back-txt{
@@ -82,48 +134,34 @@ div.log-in{
     font-size: 10em;
     font-weight: 700;
     font-style: normal;
-    margin-left: 10px;
     margin-bottom: 0px;
 }
 
 .back-txt1{
     color: #191919;
-    display: inline-block;
     font-size: 10em;
     font-weight: 700;
-    font-style: normal;
-    margin-left: 150px;
-    margin-right: 220px;
+    margin-left: 70px;
+    margin-right: 70px;
     margin-bottom: auto;
     margin-top: 0px;
 }
 
 .back-txt2{
-    color: #191919;
-    display: inline-block;
-    font-size: 10em;
-    font-weight: 700;
-    font-style: normal;
-    margin-left: 170px;
-    margin-right: 150px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-left: 430px;
 }
 
 .merc{
     margin-top: -230px;
-    z-index: 1;
-    max-width: 100%;
-    height: auto;
 }
 
 .circles{
-    margin-top: 40px;
-    margin-right: 110px;
-    margin-left: auto;
-    position: relative;
-    bottom: 150px;
-    float: right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 1500px;
+    margin-top: -380px;
+    margin-bottom: 400px;
 }
 
 .circle1{
@@ -151,8 +189,8 @@ div.log-in{
 
 .txt{
     color: #ffffff;
-    font-size: 0.9em;
-    margin-top: 80px;
+    font-weight: 700;
+    text-align: center;
 }
 
 form {
@@ -162,6 +200,7 @@ form {
 
 .search-txt{
     background-color: #131210;
+    color: white;
     width: 270px;
     height: 60px;
     border: 0px solid;
@@ -174,6 +213,7 @@ form {
 
 .search-txt1{
     background-color: #131210;
+    color: white;
     width: 270px;
     height: 60px;
     border: 0px solid;
@@ -186,6 +226,7 @@ form {
 
 .search-txt2{
     background-color: #131210;
+    color: white;
     width: 270px;
     height: 60px;
     border: 0px solid;
@@ -203,7 +244,7 @@ form {
     border-radius: 30px;
     width: 214px;
     height: 55px;
-    margin-top: 30px;
+    margin-top: 50px;
     position: relative;
     bottom: 10px;
 }
@@ -216,6 +257,165 @@ form {
     font-size: 1em;
     text-decoration: none;
     font-weight: 700;
+}
+
+@media (max-width: 1600px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/
+    
+    .circles{
+        display: flex;
+        margin-left: 0px;
+        margin-top: 30px;
+        margin-bottom: 130px;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .circle2 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1300px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/
+
+    .back-txt2{
+        margin-left: 220px;
+    }
+    
+    .merc{
+        margin-top: -190px;
+    }
+
+    .search-txt2 {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 1100px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/
+    
+    .back-txt2{
+        margin-left: 20px;
+    }
+
+    .merc{
+        width: 690px;
+        height: 420px;
+        margin-top: 0px;
+    }
+
+    .search-txt2 {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 1000px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/
+    
+    .merc{
+        width: 490px;
+        height: 310px;
+        margin-left: 380px;
+        margin-top: -338px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    
+    .search-txt {
+        margin-right: 0px;
+    }
+
+    .search-txt1 {
+        margin-right: 0px;
+    }
+
+    .search-txt2 {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 800px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/
+    
+    .merc{
+        width: 490px;
+        height: 310px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .back-txt1{
+        margin-left: 20px;
+    }
+
+    .back-txt2{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 700px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/
+    
+    .merc{
+        width: 390px;
+        height: 250px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .back-txt{
+        font-size: 8em;
+    }
+
+    .back-txt1{
+        font-size: 8em;
+        margin-left: 30px;
+    }
+
+    .back-txt2{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 600px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/
+    
+    .merc{
+        width: 290px;
+        height: 180px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .big-text-box{
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+        text-shadow: black 10px 10px 40px;
+    }
+
+    .back-txt{
+        font-size: 6em;
+        margin-left: 0px;
+    }
+
+    .back-txt1{
+        font-size: 6em;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 400px) { /* медиа-запрос для настройки елементов в header под разные размеры екранов*/ 
+
+    .back-txt{
+        font-size: 5em;
+    }
+
+    .back-txt1{
+        font-size: 5em;
+        margin-left: 10px;
+    }
+
 }
 
 main{
@@ -661,7 +861,8 @@ b{
 
 .option-txt{
     background-color: #135ec5;
-    width: 300px;
+    color: white;
+    width: 250px;
     height: 70px;
     border: 0px solid;
     border-bottom: 1px solid #adadad;
@@ -685,4 +886,608 @@ b{
     font-size: 1em;
     text-decoration: none;
     font-weight: 700;
+}
+
+
+@media (max-width: 1800px){
+    .blue-merc-block{
+        margin: 200px 75px 0px 70px;
+    }
+
+    .white-merc-block{
+        margin: 200px 70px 0px 75px;
+    }
+}
+
+@media (max-width: 1600px){
+    .blue-merc-block{
+        margin: 200px 25px 0px 20px;
+    }
+
+    .white-merc-block{
+        margin: 200px 20px 0px 25px;
+    }
+}
+
+@media (max-width: 1400px){
+    .blue-merc-block{
+        margin: 200px 395px 0px 395px;
+    }
+
+    .white-merc-block{
+        margin: 200px 145px 0px 145px;
+    }
+}
+
+@media (max-width: 1200px){
+    .blue-merc-block{
+        margin: 200px 307px 0px 307px;
+    }
+
+    .white-merc-block{
+        margin: 200px 57px 0px 57px;
+    }
+}
+
+@media (max-width: 1100px){
+    .option-txt{
+        width: 200px;
+        font-size: 0.8em;
+    } 
+}
+
+@media (max-width: 1000px){
+
+    .blue-merc-block{
+        margin: 200px 240px 0px 240px;
+    }
+
+    .white-merc-block {
+        width: 940px;
+        margin-left: -22px;
+    }
+
+    .search-block1 {
+        width: 170px;
+        height: 45px;
+        font-size: 0.8em;
+    }
+
+    .search-button1{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 800px){
+    .bmw {
+        margin-left: -75px;
+    }
+
+    .add-now-txt {
+        font-size: 2em;
+        padding-top: 150px;
+    }
+
+    .blue-merc-block {
+        margin-left: 150px;
+    }
+
+    .white-merc-block {
+        width: 660px;
+        margin-left: 40px;
+    }
+
+    .merc-white-back {
+        width: 330px;
+        height: 460px;
+        margin-right: 0px;
+    }
+
+    .white-merc-img {
+        margin-top: 110px;
+        margin-left: -15px;
+        right: 27px;
+        width: 410px;
+    }
+
+    .fresh-block1 {
+        width: 50px;
+        height: 19px;
+        top: 30px;
+        right: 25px;
+    }
+
+    .fresh-txt1 {
+        bottom: 6px;
+        font-size: 0.6em;
+    }
+
+    .cost{
+        font-size: 1.5em;
+    }
+
+    .merc-cars-txt1 {
+        margin-right: 64px;
+    }
+
+    .mercwhite-txt {
+        font-size: 1.2em;
+    }
+
+    .description-block {
+        margin-left: 0px;
+        margin-top: -30px;
+    }
+
+    .description1 {
+        width: 260px;
+        font-size: 0.8em;
+        line-height: 50px;
+    }
+
+    .order-block {
+        width: 180px;
+        height: 50px;
+    }
+
+    .order-button {
+        padding-top: 5px;
+        padding-left: 47px;
+        font-size: 0.8em;
+    }
+    
+    .circles-merc {
+        margin-top: 30px;
+        margin-left: 135px;
+    }
+}
+
+@media (max-width: 700px){
+
+    .back-bmw-txt{
+        font-size: 7em;
+    }
+
+    .bmw-img {
+        margin-top: 75px;
+        margin-left: 180px;
+        width: 400px;
+    }
+
+    .bmw-series {
+        font-size: 2em;
+    }
+
+    .bmw-txt {
+        font-size: 0.7em;
+        line-height: 30px;
+    }
+
+    .view-block {
+        width: 155px;
+        height: 45px;
+    }
+
+    .view-button {
+        font-size: 0.6em;
+        top: 8px;
+    }
+
+    .add-now-block{
+        width: 170px;
+        height: 50px;
+    }
+
+    .add-now-button {
+        font-size: 0.8em;
+        padding-top: 5px;
+    }
+
+    .BMW-X5 {
+        margin-top: 110px;
+        width: 430px;
+    }
+
+    .blue-merc-block {
+        margin-left: 120px;
+    }
+
+    .merc-blue-back {
+        width: 380px;
+        height: 160px;
+    }
+
+    .furie {
+        font-size: 7em;
+    }
+
+    .fresh-block {
+        width: 63px;
+        height: 22px;
+        bottom: 115px;
+    }
+
+    .fresh-txt {
+        bottom: 7px;
+        font-size: 0.7em;
+    }
+
+    .blue-merc-img {
+        margin-top: -32px;
+        margin-left: 84px;
+        width: 220px;
+    }
+
+    .merc-txt-block {
+        margin-top: 110px;
+        width: 380px;
+    }
+
+    .mercblue-txt {
+        font-size: 1.5em;
+    }
+
+    .merc-cars-txt {
+        font-size: 0.9em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    .cost-block {
+        margin-right: 55px;
+    }
+
+    .cost {
+        font-size: 1.2em;
+    }
+
+    .more-info-block {
+        width: 140px;
+        height: 40px;
+    }
+
+    .more-info-button {
+        font-size: 0.7em;
+    }
+
+    .white-merc-block {
+        width: 540px;
+        margin-left: 40px;
+    }
+
+    .merc-white-back {
+        width: 260px;
+        height: 390px;
+    }
+
+    .white-merc-img {
+        margin-top: 72px;
+        margin-left: 50px;
+        right: 108px;
+        width: 350px;
+    }
+
+    .circles-merc {
+        margin-top: 40px;
+        margin-left: 100px;
+    }
+
+    .merc-cars-txt1 {
+        margin-right: 33px;
+    }
+
+    .description-block {
+        margin-top: -40px;
+    }
+
+    .mercwhite-txt {
+        font-size: 1.1em;
+    }
+
+    .description1 {
+        width: 217px;
+        font-size: 0.6em;
+        line-height: 30px;
+    }
+
+    .order-block {
+        width: 140px;
+        height: 40px;
+    }
+
+    .order-button {
+        padding-top: 5px;
+        padding-left: 39px;
+        font-size: 0.6em;
+    }
+
+    td {
+        font-size: 1em;
+    }
+
+    .pin {
+        margin-right: 7px;
+        width: 10px;
+    }
+
+    .car-tagname{
+        width: 50px;
+    }
+
+    .back-option {
+        height: 290px;
+    }
+
+    .hide-block {
+        width: 160px;
+        height: 30px;
+        bottom: 30px;
+    }
+
+    .hide-button {
+        font-size: 0.6em;
+        top: 10px;
+        left: 23px;
+    }
+
+    .option-table {
+        height: 80px;
+        width: 90%;
+    }
+
+    .option-txt {
+        width: 110px;
+        font-size: 0.7em;
+        height: 35px;
+    }
+
+    .search-block1 {
+        width: 112px;
+        height: 35px;
+        font-size: 0.6em;
+    }
+
+    .search-button1 {
+        margin-top: 11px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .bmw {
+        margin-left: 0px;
+    }
+
+    .back-bmw-txt{
+        font-size: 5em;
+        margin-left: 130px;
+        margin-top: -41px;
+    }
+
+    .bmw-img {
+        margin-top: 15px;
+        margin-left: 133px;
+        width: 240px;
+    }
+
+    .bmw-series {
+        font-size: 1em;
+    }
+
+    .bmw-inf {
+        margin-right: 100px;
+    }
+
+    .bmw-txt {
+        width: 240px;
+    }
+
+    .view-block {
+        width: 120px;
+        height: 35px;
+    }
+
+    .view-button {
+        font-size: 0.5em;
+        top: 5px;
+    }
+
+    .add-now-txt {
+        font-size: 1em;
+    }
+
+    .add-now-block{
+        width: 145px;
+        height: 45px;
+    }
+
+    .add-now-button {
+        font-size: 0.7em;
+    }
+
+    .BMW-X5 {
+        margin-top: 161px;
+        width: 330px;
+    }
+
+    .blue-merc-block {
+        margin-left: 65px;
+    }
+
+    .merc-blue-back {
+        width: 350px;
+        height: 150px;
+    }
+
+    .furie {
+        font-size: 6em;
+    }
+
+    .fresh-block {
+        width: 50px;
+        height: 17px;
+        bottom: 100px;
+    }
+
+    .fresh-txt {
+        font-size: 0.6em;
+    }
+
+    .blue-merc-img {
+        margin-left: 75px;
+    }
+
+    .merc-txt-block {
+        width: 350px;
+    }
+
+    .cost-block {
+        margin-right: 80px;
+    }
+
+    .white-merc-block {
+        width: 345px;
+        height: 400px;
+        margin-left: 70px;
+        margin-top: -70px;
+    }
+
+    .merc-white-back {
+        width: 160px;
+        height: 300px;
+    }
+
+    .fresh-block1 {
+        width: 44px;
+        height: 16px;
+        top: 18px;
+        right: 15px;
+    }
+
+    .fresh-txt1 {
+        bottom: 5px;
+        font-size: 0.5em;
+    }
+
+    .white-merc-img {
+        margin-top: 76px;
+        width: 250px;
+    }
+
+    .circles-merc {
+        margin-top: 19px;
+        margin-left: 57px;
+    }
+
+    .grey-circle {
+        width: 4px;
+        height: 4px;
+    }
+
+    .white-circle {
+        width: 8px;
+        height: 8px;
+    }
+
+    .grey-circle1 {
+        width: 4px;
+        height: 4px;
+    }
+
+    .merc-cars-txt1 {
+        margin-right: 10px;
+        margin-left: 0px;
+        font-size: 0.8em;
+    }
+
+    .cost {
+        font-size: 1em;
+        margin-right: 0px;
+    }
+
+    .description-block {
+        margin-top: -50px;
+    }
+
+    .mercwhite-txt {
+        font-size: 0.9em;
+    }
+
+    .description1 {
+        width: 153px;
+        font-size: 0.5em;
+        line-height: 22px;
+    }
+
+    .order-block {
+        width: 105px;
+        height: 35px;
+    }
+
+    .order-button {
+        padding-top: 2px;
+        padding-left: 23px;
+    }
+
+    table{
+        height: 90px;
+    }
+
+    td {
+        font-size: 0.7em;
+    }
+
+    .pin {
+        margin-right: 6px;
+        width: 6px;
+    }
+
+    .car-tagname{
+        width: 30px;
+    }
+
+    .back-option {
+        height: 200px;
+    }
+
+    .hide-block {
+        width: 140px;
+    }
+
+    .hide-button {
+        font-size: 0.5em;
+    }
+
+    .option-table {
+        height: 50px;
+        width: 90%;
+    }
+
+    .option-txt {
+        width: 60px;
+        font-size: 0.6em;
+        height: 25px;
+    }
+
+    .search-block1 {
+        width: 90px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .bmw {
+        margin-left: -50px;
+    }
+
+    .blue-merc-block {
+        margin-left: 10px;
+    }
+
+    .white-merc-block {
+        margin-left: 15px;
+    }
 }
